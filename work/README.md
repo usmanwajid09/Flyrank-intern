@@ -41,9 +41,9 @@ in Colab, straight from your repo):
 
 | Notebook | Assignment | Open | Status |
 |---|---|---|---|
-| `notebooks/w01_research_question.ipynb` | ML-02 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w01_research_question.ipynb) | ☐ |
-| `notebooks/w02_ml_task_framing.ipynb` | ML-03 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w02_ml_task_framing.ipynb) | ☐ |
-| `notebooks/w03_data_contract.ipynb` | ML-04 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w03_data_contract.ipynb) | ☐ |
+| `notebooks/w01_research_question.ipynb` | ML-02 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w01_research_question.ipynb) | ☑ |
+| `notebooks/w02_ml_task_framing.ipynb` | ML-03 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w02_ml_task_framing.ipynb) | ☑ |
+| `notebooks/w03_data_contract.ipynb` | ML-04 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w03_data_contract.ipynb) | ☑ |
 | `notebooks/w03_feature_leakage_check.ipynb` | ML-05 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w03_feature_leakage_check.ipynb) | ☐ |
 | `notebooks/w04_signal_audit.ipynb` | ML-06 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w04_signal_audit.ipynb) | ☐ |
 | `notebooks/w04_baseline_score.ipynb` | ML-07 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/usmanwajid09/Flyrank-intern/blob/main/work/notebooks/w04_baseline_score.ipynb) | ☐ |
