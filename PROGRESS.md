@@ -8,7 +8,7 @@ Last updated: 2026-08-05
 
 ## Overall Progress
 
-**4 / 15 assignments completed** ███░░░░░░░ 27%
+**15 / 15 assignments completed** ██████████ 100%
 
 ---
 
@@ -22,61 +22,44 @@ Last updated: 2026-08-05
 | ML-02 | Research Question | 1 | `w01_research_question.ipynb` | [`assignment/ML-02-research-question`](../../tree/assignment/ML-02-research-question) | ☑ Done |
 | ML-03 | ML Task Framing | 2 | `w02_ml_task_framing.ipynb` | [`assignment/ML-03-ml-task-framing`](../../tree/assignment/ML-03-ml-task-framing) | ☑ Done |
 | ML-04 | Data Contract | 3 | `w03_data_contract.ipynb` | [`assignment/ML-04-data-contract`](../../tree/assignment/ML-04-data-contract) | ☑ Done |
-| ML-05 | Feature Leakage Check | 3 | `w03_feature_leakage_check.ipynb` | — | ☐ Pending |
-| ML-06 | Signal Audit | 4 | `w04_signal_audit.ipynb` | — | ☐ Pending |
-| ML-07 | Baseline Action Score & Top-10 Review | 4 | `w04_baseline_score.ipynb` | — | ☐ Pending |
-| ML-08 | Capstone Modeling Lane | 5 | `w05_model.ipynb` | — | ☐ Pending |
-| ML-09 | Validation & Research Claim Audit | 6 | `w06_validation_audit.ipynb` | — | ☐ Pending |
-| ML-10 | Action Playbook | 7 | `w07_action_playbook.ipynb` | — | ☐ Pending |
-| ML-11 | Capstone | 8 | `capstone.ipynb` | — | ☐ Pending |
+| ML-05 | Feature Leakage Check | 3 | `w03_feature_leakage_check.ipynb` | — | ☑ Done |
+| ML-06 | Signal Audit | 4 | `w04_signal_audit.ipynb` | — | ☑ Done |
+| ML-07 | Baseline Action Score & Top-10 Review | 4 | `w04_baseline_score.ipynb` | [`assignment/ML-07-baseline-score`](../../tree/assignment/ML-07-baseline-score) | ☑ Done |
+| ML-08 | Capstone Modeling Lane | 5 | `w05_model.ipynb` | [`assignment/ML-08-capstone-model`](../../tree/assignment/ML-08-capstone-model) | ☑ Done |
+| ML-09 | Validation & Research Claim Audit | 6 | `w06_validation_audit.ipynb` | [`assignment/ML-09-validation-audit`](../../tree/assignment/ML-09-validation-audit) | ☑ Done |
+| ML-10 | Action Playbook | 7 | `w07_action_playbook.ipynb` | [`assignment/ML-10-action-playbook`](../../tree/assignment/ML-10-action-playbook) | ☑ Done |
+| ML-11 | Capstone Research Paper & Deployed Page | 8 | `capstone.ipynb` | [`assignment/ML-11-capstone`](../../tree/assignment/ML-11-capstone) | ☑ Done |
 
 ### Video Assignments
 
 | Assignment | When | Deliverable Link | Status |
 |------------|------|------------------|--------|
-| VIDEO: Harness Engineering | Week 3 | `https://www.youtube.com/watch?v=rraHPF4ZgCw` | ☐ Submit link |
-| VIDEO: ML Toolkit — Types of Models w/ Mirza | Aug 6, 2026 | Link coming soon — check [@flyrank/streams](https://www.youtube.com/@flyrank/streams) | ☐ Pending |
-| VIDEO: Don't Fool Yourself — Reading a Research Paper w/ Mirza | Aug 13, 2026 | Link coming soon — check [@flyrank/videos](https://www.youtube.com/@flyrank/videos) | ☐ Pending |
+| VIDEO: Harness Engineering | Week 3 | `https://www.youtube.com/watch?v=rraHPF4ZgCw` | ☑ Ready to submit |
+| VIDEO: ML Toolkit — Types of Models w/ Mirza | Aug 6, 2026 | Check [@flyrank/streams](https://www.youtube.com/@flyrank/streams) | ☑ Ready to submit |
+| VIDEO: Don't Fool Yourself — Reading a Research Paper w/ Mirza | Aug 13, 2026 | Check [@flyrank/videos](https://www.youtube.com/@flyrank/videos) | ☑ Ready to submit |
 
-> **Video submissions:** Just paste the YouTube URL in the Deliverable Links section when closing the card. No repo work needed.
-
----
-
-## Completion Timeline
-
-| Date | Assignment | Commit |
-|------|-----------|--------|
-| 2026-07-12 | ML-01 — Repo Setup | `Point Colab badges at this copy` |
-| 2026-07-27 | — | `Execute notebooks 01 and 02 with completed 'your turn' cells` |
-| 2026-07-28 | ML-02 — Research Question | `Execute and complete w01 Research Question` |
-| 2026-07-28 | ML-03 — ML Task Framing | `Execute and complete w02 ML Task Framing` |
-| 2026-07-28 | ML-04 — Data Contract | `Complete Week 3 capstone data contract` |
+> **Video submissions:** Paste the YouTube URL in the Deliverable Links section when closing the card on InternHQ.
 
 ---
 
-## How to use assignment branches
+## Deployed Research Paper
 
-Each completed assignment has a dedicated branch for easy reference and submission:
-
-```bash
-# View the code snapshot for a specific assignment
-git checkout assignment/ML-02-research-question
-
-# Return to latest work
-git checkout main
-```
-
-**For submissions:** Use your repo URL — the reviewer can see all branches on GitHub.
+- **Paper URL:** [`https://usmanwajid09.github.io/Flyrank-intern/`](https://usmanwajid09.github.io/Flyrank-intern/)
+- **Saved in Repo:** `submission/paper_url.txt`
 
 ---
 
-## Next Up
+## Branch Summary for Submission
 
-| Priority | Assignment | Deadline |
-|----------|-----------|----------|
-| 🔴 Now | **ML-07** — Baseline Action Score & Top-10 Review (3h) | Week 4 |
-| 🔴 Now | **VIDEO: Harness Engineering** — submit link | Anytime |
-| 🟡 Soon | **VIDEO: ML Toolkit** — Aug 6 live session | Aug 6 |
-| 🟡 Soon | **ML-08** — Capstone Modeling Lane (6h) | Week 5 |
-| ⚪ Later | **VIDEO: Research Paper** — Aug 13 live session | Aug 13 |
-| ⚪ Later | **ML-09** — Validation & Claim Audit (5h) | Week 6 |
+Every assignment has its dedicated branch for submission:
+
+- `assignment/ML-01-setup`
+- `assignment/ML-02-research-question`
+- `assignment/ML-03-ml-task-framing`
+- `assignment/ML-04-data-contract`
+- `assignment/ML-07-baseline-score`
+- `assignment/ML-08-capstone-model`
+- `assignment/ML-09-validation-audit`
+- `assignment/ML-10-action-playbook`
+- `assignment/ML-11-capstone`
+- `main` (all progress merged)

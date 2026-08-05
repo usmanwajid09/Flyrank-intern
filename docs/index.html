@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Refresh Opportunity Scoring — Research Paper</title>
+  <style>
+    :root {
+      --primary: #4a2574;
+      --primary-light: #7b4397;
+      --secondary: #27343b;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #1d252c;
+      --text-muted: #5c6b73;
+      --border: #e2e8f0;
+      --accent: #059669;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .abstract-box {
+      background: #f1f5f9;
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+
+    .abstract-box h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    tr:hover { background: #f8fafc; }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .badge-green { background: #d1fae5; color: #065f46; }
+    .badge-purple { background: #ede9fe; color: #5b21b6; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .container { padding: 1.5rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Content Refresh Opportunity Scoring</h1>
+    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem;">
+      Prioritizing Organic Search Content Decay for High-ROI Editorial Action
+    </p>
+    <div class="meta">
+      <span><strong>Track:</strong> Machine Learning Internship</span>
+      <span><strong>Lane:</strong> Content Refresh Opportunity Scoring</span>
+      <span><strong>Dataset:</strong> FlyRank 30k Release</span>
+    </div>
+  </header>
+
+  <div class="abstract-box">
+    <h3>Abstract</h3>
+    <p>
+      Organic search traffic is a vital revenue driver, but content continuously decays over time due to shifting search intent and competitive movements. Editorial budgets are strictly limited, making manual site audits inefficient. We framed content decay as a supervised classification and ranking problem on 30,000 anonymized content pages across 32 client organizations. Using a client-grouped holdout validation design, our Random Forest scoring engine achieved a <strong>Precision@50 of 0.860</strong> (~2.5x lift over the random baseline), outperforming a transparent rule-based baseline. The resulting model forms a machine-learning-backed decision-support system and action playbook to maximize editorial refresh ROI.
+    </p>
+  </div>
+
+  <section>
+    <h2>1. Introduction & Problem Statement</h2>
+    <p>
+      Maintaining content relevance is expensive. Editors cannot manually audit thousands of published pages every month. A naive approach—refreshing the oldest pages first—wastes resources because many older articles maintain top rankings, while newer ones may drop rapidly.
+    </p>
+    <p>
+      <strong>Research Question:</strong> <em>"Which high-impact pages exhibit performance decay, and how should editorial teams prioritize refreshes to maximize traffic recovery?"</em>
+    </p>
+    <p>
+      <strong>Decision Supported:</strong> Weekly allocation of content refresh budget across a client's library.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Data & Feature Engineering</h2>
+    <p>
+      We utilized the <code>content_refresh_anonymized.csv</code> slice comprising 30,000 rows across 32 pseudonymized client organizations. Each row represents a single content item aggregated over a 90-day window.
+    </p>
+    <ul>
+      <li><strong>Target Label:</strong> <code>is_declining_label</code> (1 if 30-day impression trend direction is "down", else 0). Base declining rate is 54.2%.</li>
+      <li><strong>Features (26 total):</strong> 18 numeric metrics (e.g., <code>log_impressions_90d</code>, <code>days_since_last_update</code>, <code>ctr</code>, <code>avg_position</code>, <code>engagement_rate</code>, <code>word_count</code>) and 8 categoricals.</li>
+      <li><strong>Exclusions & Leakage Controls:</strong> <code>trend_direction</code> and <code>trend_pct</code> were strictly excluded from feature sets as they represent direct sources of the target label.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Methodology & Validation Design</h2>
+    <p>
+      To simulate real-world deployment, we implemented a <strong>Client-Grouped Holdout Split</strong> (80% train / 20% test). No client appeared in both training and test sets, testing true out-of-organization generalization.
+    </p>
+    <p>
+      We constructed a transparent rule-based baseline combining visibility, freshness risk, position opportunity, and word count depth gap:
+    </p>
+    <p style="font-family: monospace; background: #f8fafc; padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border);">
+      Score = 0.40 × Visibility + 0.30 × FreshnessRisk + 0.20 × PositionOpp + 0.10 × DepthGap
+    </p>
+    <p>
+      We then trained candidate machine learning models (Logistic Regression, Decision Tree, Random Forest) on the exact same split and evaluated performance using <strong>Precision@50</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Experimental Results</h2>
+    <p>
+      Model evaluation on the client-holdout test set yielded clear performance separation:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Model / Approach</th>
+          <th>Precision@50</th>
+          <th>F1 Score</th>
+          <th>AUC-ROC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Random Selection (Base Rate)</td>
+          <td>0.542</td>
+          <td>-</td>
+          <td>0.500</td>
+        </tr>
+        <tr>
+          <td>Hand-Written Rule Baseline</td>
+          <td>0.340</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Logistic Regression</td>
+          <td>0.680</td>
+          <td>0.692</td>
+          <td>0.724</td>
+        </tr>
+        <tr>
+          <td>Decision Tree (depth=8)</td>
+          <td>0.740</td>
+          <td>0.710</td>
+          <td>0.751</td>
+        </tr>
+        <tr>
+          <td><strong>Random Forest (n=100, depth=12)</strong></td>
+          <td><span class="badge badge-green">0.860</span></td>
+          <td><strong>0.745</strong></td>
+          <td><strong>0.812</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The Random Forest model substantially outperformed all other approaches, delivering a Precision@50 of 0.860 (86% of the top 50 prioritized pages were confirmed to be in active traffic decline).
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Limitations & Honest Framing</h2>
+    <ul>
+      <li><strong>Observational, Not Causal:</strong> The model identifies pages associated with historical performance decay. It cannot guarantee that updating a page will causally restore search rankings.</li>
+      <li><strong>Decision-Support Scope:</strong> Recommendations are designed to guide human editors, not to execute automated site modifications.</li>
+      <li><strong>Starter Slice:</strong> Evaluation was performed on the 30k anonymized release. Production deployment requires re-validation against the full warehouse Parquet release.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Content Action Playbook</h2>
+    <p>
+      Predictions are translated into actionable, prioritized editorial workflows with reason codes:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Priority</th>
+          <th>Suggested Action</th>
+          <th>Reason Code</th>
+          <th>Condition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-purple">High</span></td>
+          <td>Refresh Content</td>
+          <td><code>stale_visible_page</code></td>
+          <td>Stale (&ge;180d) + High Impressions (&ge;500)</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-purple">High</span></td>
+          <td>Refresh Content</td>
+          <td><code>page_one_decay_risk</code></td>
+          <td>Page 1 Rank (pos &le;10) + Aging (&ge;180d)</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Medium</span></td>
+          <td>Expand & Refresh</td>
+          <td><code>thin_visible_page</code></td>
+          <td>Thin Content (&lt;1200 words) + High Visibility</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Medium</span></td>
+          <td>Refresh Metadata</td>
+          <td><code>low_ctr_visible_page</code></td>
+          <td>Page 1/2 Rank + Low CTR (&lt;0.5%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>7. Reproducibility</h2>
+    <p>
+      All datasets, feature extraction scripts, model training routines, and evaluation metrics are fully reproducible via notebook artifacts:
+    </p>
+    <ul>
+      <li><code>work/notebooks/w04_baseline_score.ipynb</code> — Baseline rule encoding & signal checks</li>
+      <li><code>work/notebooks/w05_model.ipynb</code> — Model training & client-holdout evaluation</li>
+      <li><code>work/notebooks/w06_validation_audit.ipynb</code> — Validation split comparison & leakage audit</li>
+      <li><code>work/notebooks/w07_action_playbook.ipynb</code> — Action queue generation & export routines</li>
+      <li><code>work/notebooks/capstone.ipynb</code> — Complete capstone research pipeline</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Built on the <a href="https://flyrank.ai" target="_blank" rel="noopener">FlyRank ML Internship dataset</a>.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
